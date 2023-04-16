@@ -9,21 +9,31 @@
 /* Begin PBXBuildFile section */
 		E201FF5729EB9555005B5D73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E201FF5629EB9555005B5D73 /* AppDelegate.swift */; };
 		E201FF5929EB9555005B5D73 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E201FF5829EB9555005B5D73 /* SceneDelegate.swift */; };
-		E201FF5B29EB9555005B5D73 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E201FF5A29EB9555005B5D73 /* ViewController.swift */; };
 		E201FF5E29EB9555005B5D73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E201FF5C29EB9555005B5D73 /* Main.storyboard */; };
 		E201FF6029EB9555005B5D73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E201FF5F29EB9555005B5D73 /* Assets.xcassets */; };
 		E201FF6329EB9555005B5D73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E201FF6129EB9555005B5D73 /* LaunchScreen.storyboard */; };
+		E201FF6B29EBBB15005B5D73 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E201FF6A29EBBB15005B5D73 /* HomePageViewController.swift */; };
+		E201FF6D29EBBB5C005B5D73 /* MovieListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E201FF6C29EBBB5C005B5D73 /* MovieListTableViewController.swift */; };
+		E201FF6F29EC1430005B5D73 /* MovieListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E201FF6E29EC1430005B5D73 /* MovieListTableViewCell.swift */; };
+		E201FF7329EC1A4A005B5D73 /* MovieListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E201FF7229EC1A4A005B5D73 /* MovieListResponse.swift */; };
+		E201FF7529EC2297005B5D73 /* MovieData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E201FF7429EC2297005B5D73 /* MovieData.swift */; };
+		E201FF7729EC22D7005B5D73 /* MovieInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E201FF7629EC22D7005B5D73 /* MovieInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E201FF5329EB9555005B5D73 /* MovieWithAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieWithAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E201FF5629EB9555005B5D73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E201FF5829EB9555005B5D73 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E201FF5A29EB9555005B5D73 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E201FF5D29EB9555005B5D73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E201FF5F29EB9555005B5D73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E201FF6229EB9555005B5D73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E201FF6429EB9555005B5D73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E201FF6A29EBBB15005B5D73 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
+		E201FF6C29EBBB5C005B5D73 /* MovieListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListTableViewController.swift; sourceTree = "<group>"; };
+		E201FF6E29EC1430005B5D73 /* MovieListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListTableViewCell.swift; sourceTree = "<group>"; };
+		E201FF7229EC1A4A005B5D73 /* MovieListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListResponse.swift; sourceTree = "<group>"; };
+		E201FF7429EC2297005B5D73 /* MovieData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieData.swift; sourceTree = "<group>"; };
+		E201FF7629EC22D7005B5D73 /* MovieInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +68,13 @@
 			children = (
 				E201FF5629EB9555005B5D73 /* AppDelegate.swift */,
 				E201FF5829EB9555005B5D73 /* SceneDelegate.swift */,
-				E201FF5A29EB9555005B5D73 /* ViewController.swift */,
 				E201FF5C29EB9555005B5D73 /* Main.storyboard */,
+				E201FF6E29EC1430005B5D73 /* MovieListTableViewCell.swift */,
+				E201FF6C29EBBB5C005B5D73 /* MovieListTableViewController.swift */,
+				E201FF6A29EBBB15005B5D73 /* HomePageViewController.swift */,
+				E201FF7229EC1A4A005B5D73 /* MovieListResponse.swift */,
+				E201FF7429EC2297005B5D73 /* MovieData.swift */,
+				E201FF7629EC22D7005B5D73 /* MovieInfo.swift */,
 				E201FF5F29EB9555005B5D73 /* Assets.xcassets */,
 				E201FF6129EB9555005B5D73 /* LaunchScreen.storyboard */,
 				E201FF6429EB9555005B5D73 /* Info.plist */,
@@ -138,9 +153,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E201FF5B29EB9555005B5D73 /* ViewController.swift in Sources */,
+				E201FF6D29EBBB5C005B5D73 /* MovieListTableViewController.swift in Sources */,
 				E201FF5729EB9555005B5D73 /* AppDelegate.swift in Sources */,
 				E201FF5929EB9555005B5D73 /* SceneDelegate.swift in Sources */,
+				E201FF7529EC2297005B5D73 /* MovieData.swift in Sources */,
+				E201FF6F29EC1430005B5D73 /* MovieListTableViewCell.swift in Sources */,
+				E201FF6B29EBBB15005B5D73 /* HomePageViewController.swift in Sources */,
+				E201FF7729EC22D7005B5D73 /* MovieInfo.swift in Sources */,
+				E201FF7329EC1A4A005B5D73 /* MovieListResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
