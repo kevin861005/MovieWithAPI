@@ -7,11 +7,12 @@
 
 import Foundation
 
-struct MovieInfo {
+struct MovieInfo : Codable{
     let backdrop_path: String
     let id: Int
     let overview: String
     let title: String
     let release_date: String
+    let poster_path: String
 }
 

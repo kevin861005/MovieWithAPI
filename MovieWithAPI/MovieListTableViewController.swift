@@ -6,13 +6,17 @@
 //
 
 import UIKit
+import Kingfisher
 
 class MovieListTableViewController: UITableViewController {
     
-    var movies: [MovieInfo]!
+    var movies = [MovieInfo]()
+    var imageInfo: ImageInfo?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        fetchMovies()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -36,13 +40,43 @@ class MovieListTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "\(MovieListTableViewCell.self)", for: indexPath) as! MovieListTableViewCell
         
-        let movieInfo = movies[indexPath.row]
+        var movieInfo = movies[indexPath.row]
         cell.movieTitle.text = movieInfo.title
         cell.movieReleaseDate.text = "上映日期：\(movieInfo.release_date)"
+                
+        if let imageUrl = URL(string: imageInfo!.secure_base_url + "original" + movieInfo.poster_path) {
+            cell.movieImage?.kf.setImage(with: imageUrl)
+        }
 
         // Configure the cell...
 
         return cell
+    }
+    
+    func fetchMovies() {
+        let urlString = "https://api.themoviedb.org/3/discover/movie?api_key=a23559d13fed39749e5b94e6fefd836e&language=zh-TW&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&year=2023&with_watch_monetization_types=flatrate";
+        
+        if let url = URL(string: urlString) {
+            URLSession.shared.dataTask(with: url) { data, response , error in
+                if let data {
+                    let decoder = JSONDecoder()
+                    do {
+                        let movieListResponse = try decoder.decode(MovieListResponse.self,
+                                                                   from: data)
+                        self.movies = movieListResponse.results
+                        
+                        DispatchQueue.main.sync {
+                            self.tableView.reloadData()
+                        }
+                    } catch {
+                        print(error)
+                        // show error alert
+                    }
+                } else {
+                    // show error alert
+                }
+            }.resume()
+        }
     }
 
     /*
